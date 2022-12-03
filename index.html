@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 4</title>
+    
+</head>
+<body>
+   
+    <script>
+      
+
+      users = [{
+        id: 1, name: "Jack", pass: 123456
+    },{
+        id: 2, name: "Ali", pass: 123456
+    },{
+        id: 3, name: "Ahmed", pass: 789000
+}]
+var removeUser = function(data, id) {
+  var index = data.findIndex(function(item) {
+    return item.id === id;
+  });
+  data.splice(index, 1);
+
+};
+removeUser(users,2);
+var addUser = function(data, id) {
+  var index = data.findIndex(function(item) {
+    return item.id === id;
+  });
+  data.push( {index:3, id: 4, name: "Alia", pass: 789076});
+  
+};
+addUser(users,3);
+var found = users.find(element => element > 10);
+console.log(found);
+
+console.log(users);
+    </script>
+    
+</body>
+</html>
